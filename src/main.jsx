@@ -11,6 +11,8 @@ import AboutPage from './pages/landingPage/aboutPage'
 import ContactPage from './pages/landingPage/contactPage'
 import './index.css'
 import App from './pages/app/app'
+import DashBoard from './pages/app/dashboard'
+import VideoPage from './pages/app/videoPage'
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
   {
     path: '/app',
     element: <App/>
+  },
+  {
+    path: '/dashboard',
+    element: <DashBoard/>
+  },
+  {
+    path: '/video',
+    element: <VideoPage/>
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

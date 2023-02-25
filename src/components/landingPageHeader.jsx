@@ -20,7 +20,7 @@ function LandingPageHeader (props) {
             <div style={ props.page === 'contact' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >contact</div>
           </a>
           <div className='px-2' >
-            <a href='/app'>
+            <a href='/dashboard'>
               <button >start a session</button>
             </a>
           </div>
