@@ -1,28 +1,29 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom'
 function LandingPageHeader (props) {
   return (
     <div>
       <header className='flex flex-row justify-between w-screen items-center' >
         <div className='logo' >
-          <img className='w-[140px] h-[50px]' src='/src/assets/grentubelogo.svg' alt='GrenTube'/>
+          <img className='w-[140px] h-[50px]' src='../../src/assets/grentubelogo.svg' alt='GrenTube'/>
         </div>
         <div className='font-bold flex flex-row items-center mx-1' >
-          <a href='/'>
+          <Link to='/home'>
             <div style={ props.page === 'home' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >home</div>
-          </a>
-          <a href='/info'>
+          </Link>
+          <Link to='/info'>
             <div style={ props.page === 'info' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >GrenTube?</div>
-          </a>
-          <a href='/about'>
+          </Link>
+          <Link to='/about'>
             <div style={ props.page === 'about' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >about</div>
-          </a>
-          <a href='/contact'>
+          </Link>
+          <Link to='/contact'>
             <div style={ props.page === 'contact' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >contact</div>
-          </a>
+          </Link>
           <div className='px-2' >
-            <a href='/dashboard'>
+            <Link to='/dashboard'>
               <button >start a session</button>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
