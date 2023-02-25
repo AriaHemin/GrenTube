@@ -19,7 +19,7 @@ function SearchBar () {
       }} className='flex flex-row justify-center bg-[#2f2f2f] text-white py-1 px-1 rounded-full mx-3 my-5' >
         <input onChange={(e) => { setUserInput(e.target.value) }} className='text-black px-5 w-96 rounded-full ' />
         <button onClick={(e) => { e.preventDefault() }} className="p-0 flex items-center justify-center h-6 w-6 ml-1 rounded-full" >
-          <img className="w-4 h-4" src='/public/assets/magnifying-glass-solid.svg' alt='search' />
+          <img className="w-4 h-4" src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/magnifying-glass-solid.svg?alt=media&token=c38d0902-bda0-4a47-bdb0-7996668a87ec' alt='search' />
         </button>
       </form>
       <div className='grid grid-cols-6 w-3/4 items-center justify-center' >{videos !== undefined ?
