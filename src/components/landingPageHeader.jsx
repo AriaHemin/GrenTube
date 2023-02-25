@@ -5,7 +5,7 @@ function LandingPageHeader (props) {
     <div>
       <header className='flex flex-row justify-between w-screen items-center' >
         <div className='logo' >
-          <img className='w-[140px] h-[50px]' src='../../src/assets/grentubelogo.svg' alt='GrenTube'/>
+          <img className='w-[140px] h-[50px]' src='/public/assets/grentubelogo.svg' alt='GrenTube'/>
         </div>
         <div className='font-bold flex flex-row items-center mx-1' >
           <Link to='/'>
