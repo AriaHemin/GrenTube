@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 function SearchBar () {
   const [keyWord, setKeyWord] = useState()
+  const [userInput, setUserInput] = useState()
   const [videos, setVideos] = useState()
   useEffect(() => {
     // eslint-disable-next-line quotes
@@ -14,16 +15,15 @@ function SearchBar () {
 
     <div className='p-0 m-0 flex items-center justify-center flex-col'>
       <form onClick={() => {
-        console.log('search')
+        setKeyWord(userInput)
       }} className='flex flex-row justify-center bg-[#2f2f2f] text-white py-1 px-1 rounded-full mx-3 my-5' >
-        <input onChange={(e) => { setKeyWord(e.target.value) }} className='text-black px-5 w-96 rounded-full ' />
+        <input onChange={(e) => { setUserInput(e.target.value) }} className='text-black px-5 w-96 rounded-full ' />
         <button onClick={(e) => { e.preventDefault() }} className="p-0 flex items-center justify-center h-6 w-6 ml-1 rounded-full" >
           <img className="w-4 h-4" src='/src/assets/magnifying-glass-solid.svg' alt='search' />
         </button>
       </form>
       <div className='grid grid-cols-6 w-3/4 items-center justify-center' >{videos !== undefined ?
         videos[0].map((video) => {
-          console.log(video)
           return (
             <div className='flex items-center justify-center flex-col' key={video.etag} >
               <div className={`w-[${video.snippet.thumbnails.default.width}px] h-[${video.snippet.thumbnails.default.height}px]`}>
