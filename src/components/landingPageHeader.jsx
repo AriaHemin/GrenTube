@@ -8,7 +8,7 @@ function LandingPageHeader (props) {
           <img className='w-[140px] h-[50px]' src='../../src/assets/grentubelogo.svg' alt='GrenTube'/>
         </div>
         <div className='font-bold flex flex-row items-center mx-1' >
-          <Link to='/home'>
+          <Link to='/'>
             <div style={ props.page === 'home' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >home</div>
           </Link>
           <Link to='/info'>
