@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     element: <DashBoard/>
   },
   {
-    path: '/video',
+    path: '/video/:videoid',
     element: <VideoPage/>
   }
 ])
