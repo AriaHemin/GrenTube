@@ -24,8 +24,8 @@ function DashBoard () {
           <img className="w-4 h-4" src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/magnifying-glass-solid.svg?alt=media&token=c38d0902-bda0-4a47-bdb0-7996668a87ec' alt='search' />
         </button>
       </form>
-      <div className='grid grid-cols-6 w-3/4 items-center justify-center' >{videos !== undefined ?
-        videos[0].map((video) => {
+      <div className='grid grid-cols-6 w-3/4 items-center justify-center' >{videos !== undefined
+        ? videos[0].map((video) => {
           return (
             // eslint-disable-next-line quotes
             <Link to={`/video/${video.id.videoId}`} className='cursor-pointer flex items-center justify-center flex-col' key={video.etag} >
