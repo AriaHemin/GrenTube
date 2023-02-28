@@ -1,5 +1,5 @@
 import LandingPageHeader from '../../components/landingPageHeader'
-
+import { Link } from 'react-router-dom'
 function InfoPage () {
   return (
     <div>
@@ -12,7 +12,9 @@ function InfoPage () {
           <div className='sm:w-1/2 mx-1'>
             <h1 className='text-4xl font-bold' >page under development !</h1>
             <p className='py-2'>i know you were waiting for a cool Info page! but in the mean while, check out the app.</p>
-            <button className='bg-white text-black my-6' >start a session</button>
+            <Link to='/session'>
+              <button className='bg-white text-black my-6' >start a session</button>
+            </Link>
           </div>
         </div>
       </div>

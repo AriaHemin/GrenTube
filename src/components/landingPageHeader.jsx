@@ -8,7 +8,7 @@ function LandingPageHeader (props) {
       {window.innerWidth < 640
         ? <header className='flex flex-row justify-between w-screen items-center ' >
           <div className='logo' >
-            <img className='xs:w-[50px] object-cover object-left h-[50px] sm:w-[140px]' src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/grentube%20logo.svg?alt=media&token=6aae336f-70c4-4f0f-9494-305831bfb77e' alt='GrenTube'/>
+            <img className='w-[140px]' src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/grentube%20logo.svg?alt=media&token=6aae336f-70c4-4f0f-9494-305831bfb77e' alt='GrenTube'/>
           </div>
           <div className='h-[50px] z-50 mx-1 overflow-visible' >
             {!isMenuActive
@@ -37,7 +37,7 @@ function LandingPageHeader (props) {
                       <div style={ props.page === 'contact' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >contact</div>
                     </Link>
                     <div className='px-2' >
-                      <Link to='/dashboard'>
+                      <Link to='/session'>
                         <button className=' text-[0.7em] md:text-[1em]' >start a session</button>
                       </Link>
                     </div>
@@ -48,7 +48,7 @@ function LandingPageHeader (props) {
         </header>
         : <header className='flex flex-row justify-between w-screen items-center ' >
             <div className='logo' >
-              <img className='w-0 xs:w-[50px] object-cover object-left h-[50px] sm:w-[140px]' src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/grentube%20logo.svg?alt=media&token=6aae336f-70c4-4f0f-9494-305831bfb77e' alt='GrenTube'/>
+              <img className=' h-[50px] w-[140px]' src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/grentube%20logo.svg?alt=media&token=6aae336f-70c4-4f0f-9494-305831bfb77e' alt='GrenTube'/>
             </div>
             <div className='font-bold flex flex-row items-center mx-1' >
               <Link to='/'>
@@ -64,7 +64,7 @@ function LandingPageHeader (props) {
                 <div style={ props.page === 'contact' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >contact</div>
               </Link>
               <div className='px-2' >
-                <Link to='/dashboard'>
+                <Link to='/session'>
                   <button className=' text-[0.7em] md:text-[1em]' >start a session</button>
                 </Link>
               </div>
