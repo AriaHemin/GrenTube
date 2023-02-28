@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 function LandingPageHeader (props) {
   const [isMenuActive, setIsMenuActive] = useState(false)
-  useState(()=>{console.log(window.innerWidth, window.innerWidth < 640)},[window.innerWidth])
   return (
     <div>
       {window.innerWidth < 640
         ? <header className='flex flex-row justify-between w-screen items-center ' >
           <div className='logo' >
-            <img className='w-0 xs:w-[50px] object-cover object-left h-[50px] sm:w-[140px]' src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/grentube%20logo.svg?alt=media&token=6aae336f-70c4-4f0f-9494-305831bfb77e' alt='GrenTube'/>
+            <img className='xs:w-[50px] object-cover object-left h-[50px] sm:w-[140px]' src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/grentube%20logo.svg?alt=media&token=6aae336f-70c4-4f0f-9494-305831bfb77e' alt='GrenTube'/>
           </div>
           <div className='h-[50px] z-50 mx-1 overflow-visible' >
             {!isMenuActive
@@ -20,7 +19,7 @@ function LandingPageHeader (props) {
               </div>
               : <div className="flex flex-col h-[185px] bg-white " >
                   <div className="flex justify-end" >
-                      <div className=" m-1 cursor-pointer" onClick={()=>{setIsMenuActive(!isMenuActive)}} >
+                      <div className=" m-1 cursor-pointer" onClick={() => { setIsMenuActive(!isMenuActive) }} >
                           <svg className="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
                       </div>
                   </div>
