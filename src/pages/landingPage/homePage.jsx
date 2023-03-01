@@ -1,5 +1,5 @@
 import LandingPageHeader from '../../components/landingPageHeader'
-import { Link } from 'react-router-dom'
+import MakeSessionPop from '../../components/makeSessionPopup'
 function HomePage () {
   return (
     <div>
@@ -12,9 +12,7 @@ function HomePage () {
           <div className='sm:w-1/2 mx-1'>
             <h1 className='text-4xl font-bold' >page under development !</h1>
             <p className='py-2'>i know you were waiting for a cool home page! but in the mean while check out the app.</p>
-            <Link to='/session'>
-              <button className='bg-white text-black my-6' >start a session</button>
-            </Link>
+            <MakeSessionPop/>
           </div>
         </div>
       </div>

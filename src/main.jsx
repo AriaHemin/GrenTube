@@ -12,7 +12,7 @@ import ContactPage from './pages/landingPage/contactPage'
 import './index.css'
 import DashBoard from './pages/app/dashboard'
 import VideoPage from './pages/app/videoPage'
-import SessionMake from './pages/app/sessionMake'
+import SessionMake from './pages/app/sessionMaker'
 
 const router = createBrowserRouter([
   {
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/session',
-    element: <SessionMake/>
+    element: <SessionMake />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

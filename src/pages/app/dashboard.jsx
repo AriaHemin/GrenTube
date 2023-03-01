@@ -8,7 +8,7 @@ function DashBoard () {
     // eslint-disable-next-line quotes
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${akeyword}&type=video&key=AIzaSyAbJ50vv1yAikqJlpkjDWX47nkp6KDndG8`)
       .then((response) => response.json())
-      .then((data) => { setVideos([data.items]); console.log(data.items) })
+      .then((data) => { setVideos([data.items]) })
   }
 
   return (
@@ -24,16 +24,17 @@ function DashBoard () {
           <img className="w-4 h-4" src='https://firebasestorage.googleapis.com/v0/b/grentube-66fd4.appspot.com/o/magnifying-glass-solid.svg?alt=media&token=c38d0902-bda0-4a47-bdb0-7996668a87ec' alt='search' />
         </button>
       </form>
-      <div className='grid grid-cols-6 w-3/4 items-center justify-center' >{videos !== undefined
+      <div className='flex flex-col justify-start' >{videos !== undefined
         ? videos[0].map((video) => {
           return (
             // eslint-disable-next-line quotes
-            <Link to={`/video/${video.id.videoId}`} className='cursor-pointer flex items-center justify-center flex-col' key={video.etag} >
-              <div className={`w-[${video.snippet.thumbnails.default.width}px] h-[${video.snippet.thumbnails.default.height}px]`}>
-                <img className='w-full' src={video.snippet.thumbnails.default.url} />
+            <Link to={`/video/${video.id.videoId}`} className='my-1 cursor-pointer flex flex-row' key={video.etag} >
+              <div className='shrink-0' >
+                <img className='mx-2 w-[160px] h-[90px] object-cover' src={video.snippet.thumbnails.default.url} />
               </div>
               <div>
-                <div className={`w-[${video.snippet.thumbnails.default.width}]px`} >{video.snippet.title}</div>
+                <div >{video.snippet.title}</div>
+                <div>{video.snippet.channelTitle}</div>
               </div>
             </Link>
           )
