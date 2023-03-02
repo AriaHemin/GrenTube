@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function SessionMake () {
-  // eslint-disable-next-line no-unused-vars
-  const [session, setSession] = useState()
+function SessionMaker (props) {
+  useEffect(()=>{console.log(props.session)},[])
   const navigate = useNavigate()
   return (
     <div>
@@ -31,4 +30,4 @@ function SessionMake () {
   )
 }
 
-export default SessionMake
+export default SessionMaker

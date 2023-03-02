@@ -1,9 +1,11 @@
 import LandingPageHeader from '../../components/landingPageHeader'
 import MakeSessionPop from '../../components/makeSessionPopup'
-function AboutPage () {
+function AboutPage (props) {
+  let session = props.session
+  let setSession = props.setSession
   return (
     <div>
-      <LandingPageHeader page={'about'}/>
+      <LandingPageHeader page={'about'} session={session} setSession={setSession}/>
       <div className='flex items-center justify-center' >
         <div className='w-3/4 sm:w-1/2 mt-24 py-4 px-2 h-96 bg-[#B1CC33] text-white rounded-xl flex items-center justify-center flex-row' >
           <div className='w-0 sm:w-1/2 sm:mx-1'>
@@ -12,7 +14,7 @@ function AboutPage () {
           <div className='sm:w-1/2 mx-1'>
             <h1 className='text-4xl font-bold' >page under development !</h1>
             <p className='py-2'>i know you were waiting for a cool about page! but in the mean while check out the app.</p>
-            <MakeSessionPop/>
+            <MakeSessionPop session={session} setSession={setSession} />
           </div>
         </div>
       </div>
