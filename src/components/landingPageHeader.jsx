@@ -69,7 +69,7 @@ function LandingPageHeader (props) {
                 <div style={ props.page === 'contact' ? { color: '#B1CC33' } : null } className='px-2 cursor-pointer' >contact</div>
               </Link>
               <div className='px-2' >
-                <MakeSessionPop session={session} setSession={setSession} />
+                <MakeSessionPop session={session} setSession={setSession}/>
               </div>
             </div>
           </header>

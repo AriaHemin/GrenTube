@@ -5,7 +5,7 @@ function HomePage (props) {
   let setSession = props.setSession
   return (
     <div>
-      <LandingPageHeader page={'home'} session={session} setSession={setSession}/>
+      <LandingPageHeader session={session} setSession={setSession} page={'home'}/>
       <div className='flex items-center justify-center' >
         <div className='w-3/4 sm:w-1/2 mt-24 py-4 px-2 h-96 bg-[#B1CC33] text-white rounded-xl flex items-center justify-center flex-row' >
           <div className='w-0 sm:w-1/2 sm:mx-1'>
@@ -14,7 +14,7 @@ function HomePage (props) {
           <div className='sm:w-1/2 mx-1'>
             <h1 className='text-4xl font-bold' >page under development !</h1>
             <p className='py-2'>i know you were waiting for a cool home page! but in the mean while check out the app.</p>
-            <MakeSessionPop session={session} setSession={setSession} />
+            <MakeSessionPop session={session} setSession={setSession}/>
           </div>
         </div>
       </div>
