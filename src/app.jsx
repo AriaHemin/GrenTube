@@ -13,7 +13,7 @@ import VideoPage from './pages/app/videoPage'
 import { SessionContext } from './context/sessionContext'
 import { useContext } from 'react'
 function App () {
-  const {session, setSession} = useContext(SessionContext)
+  const { session, setSession } = useContext(SessionContext)
   /* const router = createBrowserRouter([
     {
       path: '/',

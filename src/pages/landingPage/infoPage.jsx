@@ -1,8 +1,8 @@
 import LandingPageHeader from '../../components/landingPageHeader'
 import MakeSessionPop from '../../components/makeSessionPopup'
 function InfoPage (props) {
-  let session = props.session
-  let setSession = props.setSession
+  const session = props.session
+  const setSession = props.setSession
   return (
     <div>
       <LandingPageHeader session={session} setSession={setSession} page={'info'} />
@@ -14,7 +14,7 @@ function InfoPage (props) {
           <div className='sm:w-1/2 mx-1'>
             <h1 className='text-4xl font-bold' >page under development !</h1>
             <p className='py-2'>i know you were waiting for a cool Info page! but in the mean while, check out the app.</p>
-            <MakeSessionPop session={session} setSession={setSession}/> 
+            <MakeSessionPop session={session} setSession={setSession}/>
           </div>
         </div>
       </div>

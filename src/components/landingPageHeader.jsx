@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import MakeSessionPop from './makeSessionPopup'
 function LandingPageHeader (props) {
-  let session = props.session
-  let setSession = props.setSession
+  const session = props.session
+  const setSession = props.setSession
   const [isMenuActive, setIsMenuActive] = useState(false)
   return (
     <div>

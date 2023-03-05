@@ -3,8 +3,8 @@ import Modal from './modal'
 import SessionMaker from '../pages/app/sessionMaker'
 
 function MakeSessionPop (props) {
-  let session = props.session
-  let setSession = props.setSession
+  const session = props.session
+  const setSession = props.setSession
   const innerComp = <SessionMaker session={session} setSession={setSession} />
   const [isModalActive, setIsModalActive] = useState(false)
   return (

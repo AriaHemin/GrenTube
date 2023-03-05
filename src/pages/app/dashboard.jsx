@@ -1,12 +1,11 @@
-import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { SessionContext } from '../../context/sessionContext'
+import { useEffect, useState } from 'react'
 
 function DashBoard (props) {
   const [userInput, setUserInput] = useState()
   const [videos, setVideos] = useState()
-  let session = props.session
-  let setSession = props.setSession
+  const session = props.session
+  // const setSession = props.setSession
   function getVideos (akeyword) {
     // eslint-disable-next-line quotes
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${akeyword}&type=video&key=AIzaSyAbJ50vv1yAikqJlpkjDWX47nkp6KDndG8`)
@@ -19,7 +18,7 @@ function DashBoard (props) {
 
   return (
     <div className='w-screen flex flex-col items-center justify-center' >
-      <div className='text-xl font-bold bg-[#2f2f2f] w-full text-center text-white' >{" | " + session.intention + " | " + session.goal + " | "}</div>
+      <div className='text-xl font-bold bg-[#2f2f2f] w-full text-center text-white' >{' | ' + session.intention + ' | ' + session.goal + ' | '}</div>
       <div className='p-0 m-0 flex items-center justify-center flex-col'>
       <form className='flex flex-row justify-center bg-[#2f2f2f] text-white py-1 px-1 rounded-full mx-3 my-5' >
         <input onChange={(e) => { setUserInput(e.target.value); console.log(userInput) }} className='text-black px-5 w-96 rounded-full ' />

@@ -1,8 +1,8 @@
 import LandingPageHeader from '../../components/landingPageHeader'
 import MakeSessionPop from '../../components/makeSessionPopup'
 function HomePage (props) {
-  let session = props.session
-  let setSession = props.setSession
+  const session = props.session
+  const setSession = props.setSession
   return (
     <div>
       <LandingPageHeader session={session} setSession={setSession} page={'home'}/>

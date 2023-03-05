@@ -1,17 +1,16 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { SessionContext } from '../../context/sessionContext'
 
 function SessionMaker (props) {
   const [intention, setIntention] = useState()
   const [goal, setGoal] = useState()
-  const [timer, setTimer] = useState()
-  const [videoLimit, setVideoLimit] = useState()
+  const [timer] = useState()
+  const [videoLimit] = useState()
   const [reward, setReward] = useState()
   const [punishment, setPunishment] = useState()
   const navigate = useNavigate()
-  let session = props.session
-  let setSession = props.setSession
+  // const session = props.session
+  const setSession = props.setSession
   return (
     <div>
       <h1 className='text-3xl' >Make a  session !</h1>
@@ -19,8 +18,8 @@ function SessionMaker (props) {
         e.preventDefault()
         setSession({
           notes: [],
-          intention: intention,
-          goal: goal,
+          intention,
+          goal,
           challenge: {
             timer: {
               active: timer !== undefined,
